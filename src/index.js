@@ -1,5 +1,8 @@
 import getCoords from './userLocation';
 
+const searchBar = document.querySelector('#searchbar');
+const searchBtn = document.querySelector('#search-btn');
+
 async function getWeather(location) {
   const url = `https://api.weatherapi.com/v1/current.json?key=5114ec0429b04a698b6142530240804&q=${location}`;
   try {
@@ -26,4 +29,8 @@ const userCoords = getCoords();
 userCoords.then((res) => {
   const coords = `${res[0]}, ${res[1]}`;
   getWeather(coords);
+});
+
+searchBtn.addEventListener('click', () => {
+  getWeather(searchBar.value);
 });
