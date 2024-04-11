@@ -29,6 +29,10 @@ export default async function searchLocations(location) {
         clearSuggestions();
       });
 
+      div.classList.add('suggest');
+      name.classList.add('suggest-name');
+      p.classList.add('suggest-info');
+
       div.appendChild(name);
       div.appendChild(p);
       suggestions.appendChild(div);

@@ -1,4 +1,6 @@
 /* eslint-disable import/no-cycle */
+// eslint-disable-next-line no-unused-vars
+import css from './styles.css';
 import searchLocations from './searchLocation';
 import getCoords from './userLocation';
 

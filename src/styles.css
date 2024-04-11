@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.search-box {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  justify-items: stretch;
+  width: 300px;
+  position: relative;
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2 / 3;
+  position: absolute;
+  width: 100%;
+}
+
+.suggest {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 2px solid #ccc;
+  padding: 1rem;
+}
+
+.suggest:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.suggest-name {
+  font-weight: bold;
+}
+
+.suggest-info {
+  font-size: 0.8rem;
+}
