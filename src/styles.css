@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
   text-decoration: none;
 }
 
@@ -93,4 +94,31 @@ header {
 
 .suggest-info {
   font-size: 0.8rem;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 4fr;
+  background-color: cadetblue;
+  color: white;
+  justify-content: stretch;
+}
+
+.navbar li {
+  padding: 0.5rem;
+}
+
+.navbar li:hover {
+  background-color: #065f46;
+  border-bottom: 3px solid black;
+}
+
+.my-home,
+.last,
+.contact {
+  text-align: center;
+}
+
+.about {
+  text-align: end;
 }
