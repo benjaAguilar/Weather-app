@@ -106,6 +106,7 @@ header {
 
 .navbar li {
   padding: 0.5rem;
+  border-bottom: 3px solid transparent;
 }
 
 .navbar li:hover {
@@ -121,4 +122,96 @@ header {
 
 .about {
   text-align: end;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.location {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #a7f3d0;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  width: 50%;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.today {
+  display: grid;
+  grid-template-rows: 50px 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #a7f3d0;
+}
+
+.day {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid black;
+}
+
+.temp-data {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 3rem;
+}
+
+.temp-data img {
+  width: 60px;
+  justify-self: end;
+}
+
+.cond {
+  justify-self: center;
+  grid-column: 1 / 3;
+  font-size: 1.3rem;
+}
+
+.wind-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.wind-data div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  justify-self: end;
+}
+
+.knots {
+  font-size: 1.2rem;
+}
+
+.arrow {
+  width: 40px;
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid black;
+}
+
+.dir {
+  font-weight: bold;
+  font-size: 0.8rem;
 }
