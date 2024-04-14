@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import getWeather from './index';
+import getWeather from './getWeather';
 
 const suggestions = document.querySelector('.suggestions');
 
