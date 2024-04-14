@@ -4,6 +4,7 @@
   list-style: none;
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #141e46;
 }
 
 body {
@@ -22,7 +23,7 @@ header {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  background-color: #10b981;
+  background-color: #fff5e0;
   padding: 1.5rem;
 }
 
@@ -49,6 +50,7 @@ header {
 .logo {
   display: flex;
   gap: 1rem;
+  color: #41b06e;
 }
 
 .search {
@@ -82,7 +84,7 @@ header {
   grid-row: 2 / 3;
   position: absolute;
   width: 100%;
-  background-color: #a7f3d0;
+  background-color: #fff5e0;
   border-bottom-right-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
 }
@@ -91,12 +93,12 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #8decb4;
   padding: 1rem;
 }
 
 .suggest:hover {
-  background-color: #ccc;
+  background-color: #8decb4;
   cursor: pointer;
 }
 
@@ -111,7 +113,7 @@ header {
 .navbar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 4fr;
-  background-color: cadetblue;
+  background-color: #41b06e;
   color: white;
   justify-content: stretch;
   margin-bottom: 1rem;
@@ -125,8 +127,8 @@ header {
 }
 
 .navbar li:hover {
-  background-color: #065f46;
-  border-bottom: 3px solid black;
+  color: #fff5e0;
+  border-bottom: 3px solid #fff5e0;
 }
 
 .my-home,
@@ -151,7 +153,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #a7f3d0;
+  background-color: #8decb4;
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -168,7 +170,7 @@ header {
   gap: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: #a7f3d0;
+  background-color: #8decb4;
 }
 
 .day {
