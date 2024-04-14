@@ -1,3 +1,5 @@
+import printWeather from './printWeather';
+
 const searchBar = document.querySelector('#searchbar');
 
 export default async function getWeather(location) {
@@ -11,14 +13,16 @@ export default async function getWeather(location) {
       name: weatherData.location.name,
       location: `${weatherData.location.region}, ${weatherData.location.country}`,
       condition: weatherData.current.condition.text,
+      icon: weatherData.current.condition.icon,
       temp: weatherData.current.temp_c,
       feels_temp: weatherData.current.feelslike_c,
-      wind: weatherData.current.wind_kph,
-      gust: weatherData.current.gust_kph,
+      wind: Math.round(weatherData.current.wind_kph / 1.852),
+      gust: Math.round(weatherData.current.gust_kph / 1.852),
       wind_dir: weatherData.current.wind_dir,
       wind_degree: weatherData.current.wind_degree,
     };
     console.table(data);
+    printWeather(data);
   } catch (error) {
     console.log(error);
   }
