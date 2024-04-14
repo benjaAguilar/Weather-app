@@ -3,6 +3,18 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 4fr;
+  justify-content: center;
+  align-items: center;
+  background-image: url(imgs/sunny.jpg);
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  height: 100vh;
 }
 
 header {
@@ -102,6 +114,9 @@ header {
   background-color: cadetblue;
   color: white;
   justify-content: stretch;
+  margin-bottom: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .navbar li {
@@ -125,10 +140,8 @@ header {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
   gap: 1rem;
 }
 
@@ -140,9 +153,7 @@ header {
   text-align: center;
   background-color: #a7f3d0;
   padding: 1rem;
-  margin: 1rem;
-  border-radius: 1rem;
-  width: 50%;
+  border-radius: 0.5rem;
 }
 
 .name {
@@ -156,7 +167,7 @@ header {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: #a7f3d0;
 }
 
