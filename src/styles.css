@@ -20,7 +20,7 @@ body {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-content: center;
   align-items: center;
   background-color: #fff5e0;
@@ -74,7 +74,6 @@ header {
   display: grid;
   grid-template-rows: 40px 1fr;
   justify-items: stretch;
-  width: 300px;
   position: relative;
 }
 
@@ -129,6 +128,7 @@ header {
 .navbar li:hover {
   color: #fff5e0;
   border-bottom: 3px solid #fff5e0;
+  cursor: pointer;
 }
 
 .my-home,
@@ -162,8 +162,22 @@ header {
   font-size: 2rem;
 }
 
-.today {
+.loading {
   display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #8decb4;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+
+.loading img {
+  width: 80px;
+}
+
+.today {
+  display: none;
   grid-template-rows: 50px 1fr 1fr;
   justify-content: center;
   align-items: center;
