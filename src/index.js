@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 // eslint-disable-next-line no-unused-vars
 import css from './styles.css';
-import searchLocations from './searchLocation';
+import searchLocations, { clearSuggestions } from './searchLocation';
 import getCoords from './userLocation';
 import getWeather from './getWeather';
 import { switchLoading } from './printWeather';
@@ -20,6 +20,10 @@ function userHome() {
 
 searchBar.addEventListener('input', () => {
   searchLocations(searchBar.value);
+});
+
+searchBar.addEventListener('blur', () => {
+  setTimeout(clearSuggestions, 200);
 });
 
 homeBtn.addEventListener('click', userHome);

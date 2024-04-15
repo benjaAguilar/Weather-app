@@ -4,7 +4,7 @@ import { switchLoading } from './printWeather';
 
 const suggestions = document.querySelector('.suggestions');
 
-function clearSuggestions() {
+export function clearSuggestions() {
   while (suggestions.firstChild) {
     suggestions.removeChild(suggestions.firstChild);
   }
