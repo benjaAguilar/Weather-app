@@ -11,15 +11,13 @@ const gust = document.querySelector('.gust');
 const arrow = document.querySelector('.arrow');
 const dir = document.querySelector('.dir');
 
-export function switchLoading() {
-  if (loadingBox.style.display === 'none') {
-    todayBox.style.display = 'none';
-    loadingBox.style.display = 'grid';
+export function switchLoading(load, today) {
+  loadingBox.style.display = load;
+  todayBox.style.display = today;
+
+  if (load === 'grid') {
     name.textContent = 'The Color-Cast';
-    region.textContent = 'Daily forecast';
-  } else {
-    loadingBox.style.display = 'none';
-    todayBox.style.display = 'grid';
+    region.textContent = 'Daily Forecast';
   }
 }
 
@@ -33,5 +31,5 @@ export default function printWeather(data) {
   gust.textContent = `${data.gust} Knots`;
   arrow.style.transform = `rotate(${data.wind_degree}deg)`;
   dir.textContent = `"${data.wind_dir}"`;
-  switchLoading();
+  switchLoading('none', 'grid');
 }

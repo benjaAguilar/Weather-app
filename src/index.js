@@ -4,16 +4,23 @@ import css from './styles.css';
 import searchLocations from './searchLocation';
 import getCoords from './userLocation';
 import getWeather from './getWeather';
+import { switchLoading } from './printWeather';
 
 const searchBar = document.querySelector('#searchbar');
+const homeBtn = document.querySelector('.my-home');
 
-const userCoords = getCoords();
-userCoords.then((res) => {
-  const coords = `${res[0]}, ${res[1]}`;
-  getWeather(coords);
-});
+function userHome() {
+  switchLoading('grid', 'none');
+  const userCoords = getCoords();
+  userCoords.then((res) => {
+    const coords = `${res[0]}, ${res[1]}`;
+    getWeather(coords);
+  });
+}
+
 searchBar.addEventListener('input', () => {
   searchLocations(searchBar.value);
 });
 
-console.log(new Date());
+homeBtn.addEventListener('click', userHome);
+userHome();
