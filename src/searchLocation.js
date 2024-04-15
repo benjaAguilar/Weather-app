@@ -1,5 +1,6 @@
 /* eslint-disable import/no-cycle */
 import getWeather from './getWeather';
+import { switchLoading } from './printWeather';
 
 const suggestions = document.querySelector('.suggestions');
 
@@ -25,6 +26,7 @@ export default async function searchLocations(location) {
       p.textContent = `${place.region}, ${place.country}`;
 
       div.addEventListener('click', () => {
+        switchLoading();
         getWeather(place.name);
         clearSuggestions();
       });
