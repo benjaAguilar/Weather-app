@@ -1,4 +1,4 @@
-import printWeather from './printWeather';
+import printWeather, { printError } from './printWeather';
 
 const searchBar = document.querySelector('#searchbar');
 
@@ -25,5 +25,6 @@ export default async function getWeather(location) {
     printWeather(data);
   } catch (error) {
     console.log(error);
+    printError();
   }
 }

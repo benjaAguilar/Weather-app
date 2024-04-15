@@ -21,6 +21,13 @@ export function switchLoading(load, today) {
   }
 }
 
+export function printError() {
+  todayBox.style.display = 'none';
+  loadingBox.style.display = 'none';
+  name.textContent = 'Forecast not found ;(';
+  region.textContent = 'Please try another';
+}
+
 export default function printWeather(data) {
   name.textContent = data.name;
   region.textContent = data.location;
