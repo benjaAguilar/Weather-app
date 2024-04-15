@@ -31,7 +31,7 @@ export function printError() {
 export default function printWeather(data) {
   name.textContent = data.name;
   region.textContent = data.location;
-  condIcon.src = data.icon;
+  condIcon.src = './imgs/logo.svg';
   temp.textContent = `${data.temp}ºc`;
   cond.textContent = data.condition;
   wind.textContent = `${data.wind} Knots`;

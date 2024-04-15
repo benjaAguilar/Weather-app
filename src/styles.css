@@ -125,3 +125,59 @@ header {
   border-bottom: 2px solid #fde047;
   cursor: pointer;
 }
+
+/*Content*/
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.location {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 4rem;
+}
+
+.region {
+  font-weight: bold;
+}
+
+.weather {
+  grid-row: 1 / 2;
+  justify-self: end;
+  align-self: center;
+}
+
+.temp-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.temp {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.temp-icon {
+  width: 90px;
+  justify-self: end;
+}
+
+.cond {
+  font-size: 1.5rem;
+  grid-column: 2 / 3;
+  justify-self: center;
+  font-weight: bold;
+}
