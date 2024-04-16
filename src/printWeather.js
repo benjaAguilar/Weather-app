@@ -7,7 +7,6 @@ const condIcon = document.querySelector('.temp-icon');
 const temp = document.querySelector('.temp');
 const cond = document.querySelector('.cond');
 const wind = document.querySelector('.wind');
-const gust = document.querySelector('.gust');
 const arrow = document.querySelector('.arrow');
 const dir = document.querySelector('.dir');
 
@@ -35,7 +34,6 @@ export default function printWeather(data) {
   temp.textContent = `${data.temp}ºc`;
   cond.textContent = data.condition;
   wind.textContent = `${data.wind} Knots`;
-  gust.textContent = `${data.gust} Knots`;
   arrow.style.transform = `rotate(${data.wind_degree}deg)`;
   dir.textContent = `"${data.wind_dir}"`;
   switchLoading('none', 'grid');
