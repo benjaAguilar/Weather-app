@@ -16,6 +16,7 @@ export default async function getWeather(location) {
       icon: weatherData.current.condition.icon,
       temp: weatherData.current.temp_c,
       feels_temp: weatherData.current.feelslike_c,
+      humidity: weatherData.current.humidity,
       wind: Math.round(weatherData.current.wind_kph / 1.852),
       wind_dir: weatherData.current.wind_dir,
       wind_degree: weatherData.current.wind_degree,
