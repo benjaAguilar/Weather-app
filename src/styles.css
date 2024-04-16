@@ -239,3 +239,23 @@ header {
 .arrow {
   width: 25px;
 }
+
+/*loading dialog*/
+dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: transparent;
+}
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.loading img {
+  width: 250px;
+  border-radius: 999px;
+  border: none;
+}

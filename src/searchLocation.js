@@ -26,7 +26,7 @@ export default async function searchLocations(location) {
       p.textContent = `${place.region}, ${place.country}`;
 
       div.addEventListener('click', () => {
-        switchLoading('grid', 'none');
+        switchLoading();
         getWeather(place.name);
         clearSuggestions();
       });

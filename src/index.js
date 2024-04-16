@@ -10,7 +10,7 @@ const searchBar = document.querySelector('#searchbar');
 const homeBtn = document.querySelector('.my-home');
 
 function userHome() {
-  switchLoading('grid', 'none');
+  switchLoading();
   const userCoords = getCoords();
   userCoords.then((res) => {
     const coords = `${res[0]}, ${res[1]}`;
