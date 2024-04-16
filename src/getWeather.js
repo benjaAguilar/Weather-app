@@ -13,7 +13,7 @@ export default async function getWeather(location) {
       name: weatherData.location.name,
       location: `${weatherData.location.region}, ${weatherData.location.country}`,
       condition: weatherData.current.condition.text,
-      icon: weatherData.current.condition.icon,
+      code: weatherData.current.condition.code,
       temp: weatherData.current.temp_c,
       feels_temp: weatherData.current.feelslike_c,
       humidity: weatherData.current.humidity,

@@ -1,3 +1,5 @@
+import getImage from './getImage';
+
 const todayBox = document.querySelector('.today');
 const loadingBox = document.querySelector('.loading');
 
@@ -32,7 +34,7 @@ export function printError() {
 export default function printWeather(data) {
   name.textContent = data.name;
   region.textContent = data.location;
-  condIcon.src = './imgs/logo.svg';
+  condIcon.src = getImage(data.code);
   temp.textContent = `${data.temp}ºc`;
   cond.textContent = data.condition;
   fLike.textContent = data.feels_temp;
