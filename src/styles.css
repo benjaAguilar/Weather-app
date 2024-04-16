@@ -37,6 +37,10 @@ header {
   font-weight: bold;
 }
 
+#col {
+  color: #fde047;
+}
+
 .logo-img {
   width: 60px;
 }
@@ -81,7 +85,8 @@ header {
   grid-row: 2 / 3;
   position: absolute;
   width: 100%;
-  background-color: #fff5e0;
+  background-color: #fafafa;
+  backdrop-filter: blur(10px);
   border-bottom-right-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
 }
@@ -90,21 +95,22 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-bottom: 2px solid #8decb4;
   padding: 1rem;
 }
 
 .suggest:hover {
-  background-color: #8decb4;
+  background-color: #fde047;
   cursor: pointer;
 }
 
 .suggest-name {
   font-weight: bold;
+  color: #262626;
 }
 
 .suggest-info {
   font-size: 0.8rem;
+  color: #26262695;
 }
 
 .my-home {
@@ -168,6 +174,7 @@ header {
 .temp {
   font-size: 4rem;
   font-weight: bold;
+  color: #fde047;
 }
 
 .temp-icon {
@@ -180,4 +187,55 @@ header {
   grid-column: 2 / 3;
   justify-self: center;
   font-weight: bold;
+}
+
+/*forecast data*/
+
+.forecast-data {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+.fore-img {
+  width: 40px;
+  align-self: flex-end;
+}
+
+.fore-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  align-self: flex-end;
+  color: #fde047;
+}
+
+.fore-info {
+  grid-column: 2 / 3;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.wind-d {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.direction {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.arrow {
+  width: 25px;
 }
